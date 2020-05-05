@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EditPurchasedItem">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/etPurchasedItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:hint="Item Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Quantity"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/etPurchasedItemQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:hint="Quantity"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Price"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/etPurchasedItemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:hint="Price"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivPurchasedItem"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/image" />
+
+            <Button
+                android:id="@+id/btnBrowsImagePI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="Select Image"
+                android:onClick="browsImages"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btnCapturePI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="Capture Image"
+                android:onClick="captureImage"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white" />
+
+            <!-- an empty view for full scroll view -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
